@@ -62,7 +62,7 @@ public class SearchInBST {
         }
         traversal(root);
         System.out.println();
-        if (search(root, 0)) {
+        if (search(root, 8)) {
             System.out.println("Found");
         }
         else{
