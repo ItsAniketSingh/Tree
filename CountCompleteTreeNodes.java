@@ -25,6 +25,15 @@ Output: 1
 
 public class CountCompleteTreeNodes {
 
+    public static class TreeNode{
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode(int val){
+            this.val = val;
+        }
+    }
+
     public int countNodes(TreeNode root) {
 
         if (root == null) {
@@ -36,6 +45,9 @@ public class CountCompleteTreeNodes {
     }
 
     public static void main(String[] args) {
+
+        TreeNode root = new TreeNode(10);
+        
 
     }
 

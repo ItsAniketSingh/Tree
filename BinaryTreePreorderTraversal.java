@@ -17,40 +17,45 @@ Example 3:
 
 Input: root = [1]
 Output: [1]
- */
+ 
+*/
 
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.swing.tree.TreeNode;
-
 public class BinaryTreePreorderTraversal {
     static class TreeNode {
         int val;
-        TreeNode  left;
+        TreeNode left;
         TreeNode right;
-        TreeNode(int val){this.val = val;};
+
+        TreeNode(int val) {
+            this.val = val;
+        }
     }
 
-class Solution {
-    ArrayList<Integer> list = new ArrayList<Integer>();
-    public void inOrder(TreeNode root){
-        if(root == null){
-            return ;
+    class Solution {
+        ArrayList<Integer> list = new ArrayList<Integer>();
+
+        public void inOrder(TreeNode root) {
+            if (root == null) {
+                return;
+            }
+            list.add(root.val);
+            inOrder(root.left);
+            inOrder(root.right);
         }
-        list.add(root.val);
-        inOrder(root.left);
-        inOrder(root.right);
+
+        public List<Integer> preorderTraversal(TreeNode root) {
+
+            inOrder(root);
+            return list;
+
+        }
     }
-    public List<Integer> preorderTraversal(TreeNode root) {
-        
-        inOrder(root);
-        return list;
-        
-        
+
+    public static void main(String[] args) {
+
     }
-}    public static void main(String[] args) {
-        
-    }
-    
+
 }

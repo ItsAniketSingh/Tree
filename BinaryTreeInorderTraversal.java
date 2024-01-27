@@ -33,8 +33,8 @@ public class BinaryTreeInorderTraversal {
         TreeNode(int val){this.val = val;}
         
     }
+    
     ArrayList <Integer> list = new ArrayList<>();
-
 
     public void inOrder(TreeNode root){
         if(root == null){

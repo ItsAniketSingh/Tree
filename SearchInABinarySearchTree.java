@@ -18,14 +18,12 @@ Input: root = [4,2,7,1,3], val = 5
 Output: []
 
 
- */
-
-import javax.swing.tree.TreeNode;
+*/
 
 public class SearchInABinarySearchTree {
     public class TreeNode {
         int val;
-        TreeNode left;
+        TreeNode left; 
         TreeNode right;
 
         TreeNode() {

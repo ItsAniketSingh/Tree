@@ -21,40 +21,41 @@ Input: root = [1,2]
 Output: 1
  */
 
- import javax.swing.tree.TreeNode;
-
- public class DiameterOfBinaryTree {
+public class DiameterOfBinaryTree {
     public static class TreeNode {
         int val;
         TreeNode right;
         TreeNode left;
-        TreeNode(int val){
+
+        TreeNode(int val) {
             this.val = val;
         }
-        
+
     }
 
-     class Solution {
-     int result = 0;
-     public int pathSearch(TreeNode root){
-         if(root == null){
-             return 0;
-         }
-         int left = pathSearch(root.left);
-         int right = pathSearch(root.right);
-         result = Math.max(result, left+right);
-         return 1+Math.max(left,right);
-     }
-     public int diameterOfBinaryTree(TreeNode root) {
-         
-         pathSearch(root);
-         return result;
-         
-     }
- }
-     public static void main(String[] args) {
-         
-     }
-     
- }
- 
+    class Solution {
+        int result = 0;
+
+        public int pathSearch(TreeNode root) {
+            if (root == null) {
+                return 0;
+            }
+            int left = pathSearch(root.left);
+            int right = pathSearch(root.right);
+            result = Math.max(result, left + right);
+            return 1 + Math.max(left, right);
+        }
+
+        public int diameterOfBinaryTree(TreeNode root) {
+
+            pathSearch(root);
+            return result;
+
+        }
+    }
+
+    public static void main(String[] args) {
+
+    }
+
+}
