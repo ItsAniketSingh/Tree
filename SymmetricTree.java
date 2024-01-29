@@ -21,9 +21,11 @@ import java.util.ArrayList;
 import javax.swing.tree.TreeNode;
 
 public class SymmetricTree {
-    ArrayList<Integer> list1 = new ArrayList<>();
-    ArrayList<Integer> list2 =  new ArrayList<>();
-    static class TreeNode  {
+    public static ArrayList<Integer> list1 = new ArrayList<>();
+    public static ArrayList<Integer> list2 =  new ArrayList<>();
+
+    
+    public static class TreeNode  {
         int val;
         TreeNode left;
         Tree right;
@@ -31,7 +33,7 @@ public class SymmetricTree {
         
     }
 
-    public void leftTraversal(TreeNode root){
+    public static void leftTraversal(TreeNode root){
         if(root == null){
             list1.add(-1);
             return;
@@ -40,7 +42,7 @@ public class SymmetricTree {
         leftTraversal(root.left);
         leftTraversal(root.right);
     }
-    public void rightTraversal(TreeNode root){
+    public static void rightTraversal(TreeNode root){
         if(root == null){
             list2.add(-1);
             return;
