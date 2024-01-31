@@ -47,6 +47,7 @@ public class CountCompleteTreeNodes {
     public static void main(String[] args) {
 
         TreeNode root = new TreeNode(10);
+        TreeNode root = new TreeNode(12);
         
 
     }
